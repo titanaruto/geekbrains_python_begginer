@@ -19,8 +19,8 @@ if revenue > cost:
     count_personnel = 343
     profit_one_persona = profit / count_personnel
     print(
-        f"Чистая прибыль: {profit}\n"
-        f"Рентабельность: {profitability}\n"
-        f"Чистая прибыль на одного сотрудника:{profit_one_persona}.")
+        f"Чистая прибыль: {profit:.2f}\n"
+        f"Рентабельность: {profitability:.2f}\n"
+        f"Чистая прибыль на одного сотрудника:{profit_one_persona:.2f}.")
 elif cost - revenue:
     print("Фирма работает в убыток.")
