@@ -15,6 +15,8 @@ while True:
     if element == 'стоп':
         break
     else:
-        my_list.append(element)
-        my_list.sort(reverse = True)
-        print(my_list)
+        if element in my_list:
+            my_list.append(element)
+            my_list.sort(reverse=True)
+            print(my_list)
+
