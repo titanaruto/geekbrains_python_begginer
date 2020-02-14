@@ -15,10 +15,10 @@ def print_user_information(**kwargs):
 
 
 # two_variant realization
-# def print_user_information(name, last_name, birthday, city, email, phone):
-#     print(
-#         f"Имя: {name}, Фамилия: {last_name}, дата рождения: {birthday}, "
-#         f"Город проживания: {city}, емейл: {email}, телефон: {phone}")
+def print_user_information_2(name, last_name, birthday, city, email, phone):
+    print(
+        f"Имя: {name}, Фамилия: {last_name}, дата рождения: {birthday}, "
+        f"Город проживания: {city}, емейл: {email}, телефон: {phone}")
 
 
 print_user_information(last_name="Пузякин", name="Вася", birthday="23.02.1905", city="Москва", email="test@ts.as",
