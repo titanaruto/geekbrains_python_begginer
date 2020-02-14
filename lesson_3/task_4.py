@@ -9,19 +9,27 @@
 
 # first_variant realization
 def my_func_1(x, y):
-    return x ** y
+    if x > 0 and type(y) == int:
+        return f"{x ** y:.2f}"
+    else:
+        print("Не коректно заданы числа")
 
 
 # two_variant realization
 def my_func_2(x, y):
-    result = x
-    for iteration in range(1, y):
-        result *= x
-    return result
+    if  x > 0 and type(y) == int:
+        result = x
+        for iteration in range(1, abs(y)):
+            result *= x
+        if y < 0:
+            result = 1 / result
+        return f"{result:.2f}"
+    else:
+        print("Не коректно заданы числа")
 
 
-number = 5
-power = 3
+number = 5.2
+power = 2
 
 print(my_func_1(number, power))
 print(my_func_2(number, power))
