@@ -3,6 +3,11 @@
 
 
 def get_division_number(number_1, number_2):
+    """
+    :param number_1:
+    :param number_2:
+    :return:
+    """
     if number_2:
         try:
             number = number_1 / number_2
@@ -16,6 +21,6 @@ def get_division_number(number_1, number_2):
 
 # a = float(input("Введите первое число: "))
 # b = float(input("Введите второе число: "))
-a = 0
-b = 0
+a = 5
+b = 15
 print(get_division_number(a, b))
