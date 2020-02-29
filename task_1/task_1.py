@@ -9,20 +9,20 @@ import time
 
 
 class TrafficLight:
-    color = [("желтый", 2, 2), ("зеленый", 4, 3), ("красный", 7, 1)]
-    work = False
+    __color = [("желтый", 2, 2), ("зеленый", 4, 3), ("красный", 7, 1)]
+    __work = False
 
     def __init__(self):
-        self.work = True
-        self._running()
+        self.__work = True
+        self.__running()
 
-    def _get_work(self):
-        return self.work
+    def __get_work(self):
+        return self.__work
 
-    def _running(self):
-        work_temp = self._get_work()
+    def __running(self):
+        work_temp = self.__get_work()
         if work_temp:
-            sort_colors = sorted(self.color, key=lambda index: index[2])
+            sort_colors = sorted(self.__color, key=lambda index: index[2])
             while work_temp:
                 for element in sort_colors:
                     color, time_sleep, *other = element
