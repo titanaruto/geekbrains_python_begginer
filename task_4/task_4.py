@@ -16,6 +16,7 @@ class Car:
     color = None
     name = None
     is_police = False
+    _max_speed = None
 
     def __init__(self, speed, color, name):
         self.speed = speed
@@ -32,15 +33,13 @@ class Car:
         print(f"Поворот на {direction}")
 
     def show_speed(self):
-        print(f"Скорость: {self.speed}")
+        if self._max_speed and self.speed > self._max_speed:
+            print(f"Вы привысели максимальную ({self._max_speed}) скорость , ваша скорость: {self.speed}")
 
 
 class TownCar(Car):
-    __max_speed = 60
+    _max_speed = 60
 
-    def show_speed(self):
-        if self.speed > self.__max_speed:
-            print(f"Вы привысели максимальную ({self.__max_speed}) скорость , ваша скорость: {self.speed}")
 
 
 class SportCar(Car):
@@ -48,11 +47,7 @@ class SportCar(Car):
 
 
 class WorkCar(Car):
-    __max_speed = 40
-
-    def show_speed(self):
-        if self.speed > self.__max_speed:
-            print(f"Вы привысели максмильную ({self.__max_speed}) скорость , ваша скорость: {self.speed}")
+    _max_speed = 40
 
 
 class PoliceCar(Car):
