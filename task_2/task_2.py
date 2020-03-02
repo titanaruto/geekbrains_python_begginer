@@ -25,6 +25,9 @@ class Clothes:
 
 
 class Coat(Clothes):
+    params_one = 6.5
+    params_two = 0.5
+
     def __init__(self, name, ):
         super().__init__(name)
         self._size = None
@@ -45,12 +48,15 @@ class Coat(Clothes):
 
     def determination_of_tissue_consumption(self):
         try:
-            return float(self._size / 6.5 + 0.5)
+            return float(self._size / self.params_one + self.params_two)
         except Exception as e:
             print(e)
 
 
 class Costume(Clothes):
+    params_one = 2
+    params_two = 0.3
+
     def __init__(self, name, ):
         super().__init__(name)
         self._height = None
@@ -71,7 +77,7 @@ class Costume(Clothes):
 
     def determination_of_tissue_consumption(self):
         try:
-            return float(2 * self._height + 0.3)
+            return float(self.params_one * self._height + self.params_two)
         except Exception as e:
             print(e)
 

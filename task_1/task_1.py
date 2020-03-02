@@ -52,9 +52,7 @@ class Matrix:
                     temp.append(sum_value)
                 result.append(temp)
             return result
-        except IndexError:
-            return "Матрицы не соответствуют размеру друг друга"
-        except ValueError:
+        except (IndexError, ValueError):
             return "Матрицы не соответствуют размеру друг друга"
 
 
