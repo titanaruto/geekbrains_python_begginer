@@ -26,7 +26,7 @@ while True:
         try:
             number_int = int(value)
             list_numbers.append(number_int)
-            print(list_numbers)
+            # print(list_numbers)
         except ValueError as er:
             raise MyClassException("Не число")
 
